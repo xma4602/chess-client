@@ -1,4 +1,4 @@
-package com.xma.chess.client;
+package com.xma.chess.client.controllers;
 
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
