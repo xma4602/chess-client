@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="270.0" prefWidth="453.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xma.chess.client.controllers.CreateController">
+   <left>
+      <Pane prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <Pane prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <VBox prefHeight="282.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="64.0" prefWidth="400.0" text="Создание игры">
+               <font>
+                  <Font name="Calibri Bold" size="25.0" />
+               </font></Label>
+            <HBox prefHeight="47.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="180.0" text="Цвет ваших фигуры:">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font></Label>
+                  <ComboBox fx:id="figureColor" prefHeight="26.0" prefWidth="170.0" promptText="цвет фигуры" />
+               </children>
+            </HBox>
+            <HBox prefHeight="63.0" prefWidth="400.0">
+               <children>
+                  <Label prefHeight="18.0" prefWidth="180.0" text="Время на ход (сек.):">
+                     <font>
+                        <Font name="Calibri" size="20.0" />
+                     </font>
+                  </Label>
+                  <Spinner fx:id="timeSpinner" editable="true" prefHeight="26.0" prefWidth="171.0" />
+               </children>
+            </HBox>
+            <BorderPane>
+               <left>
+                  <Button mnemonicParsing="false" onAction="#back" prefWidth="150.0" text="Назад" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Button>
+               </left>
+               <right>
+                  <Button mnemonicParsing="false" onAction="#next" prefWidth="150.0" text="Опубликовать" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Button>
+               </right>
+               <center>
+                  <Pane prefHeight="36.0" prefWidth="58.0" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

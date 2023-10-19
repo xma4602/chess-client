@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.SubScene?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="406.0" prefWidth="538.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xma.chess.client.controllers.MatchController">
+   <top>
+      <Label alignment="CENTER" prefHeight="78.0" prefWidth="630.0" text="Игра" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Calibri Bold" size="25.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <BorderPane prefHeight="330.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <center>
+            <VBox prefHeight="330.0" prefWidth="126.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="40.0" prefWidth="176.0" text="Ходит:">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="191.0" text="Время хода:">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="40.0" prefWidth="287.0" text="Время игры:">
+                     <font>
+                        <Font name="Calibri" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </center>
+         <left>
+            <Pane prefHeight="200.0" prefWidth="22.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Pane prefHeight="200.0" prefWidth="27.0" BorderPane.alignment="CENTER" />
+         </right>
+      </BorderPane>
+   </left>
+   <center>
+      <SubScene height="329.0" width="340.0" BorderPane.alignment="CENTER">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+   </center>
+   <right>
+      <Pane prefHeight="330.0" prefWidth="44.0" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

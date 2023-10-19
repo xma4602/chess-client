@@ -1,8 +1,6 @@
 package com.xma.chess.client;
 
-import com.xma.chess.client.controllers.AuthorizationController;
-import com.xma.chess.client.controllers.ChessboardController;
-import com.xma.chess.client.controllers.RegistrationController;
+import com.xma.chess.client.controllers.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -23,6 +21,10 @@ public class SceneService<T>  {
         files.put(ChessboardController.class, "chessboard.fxml");
         files.put(AuthorizationController.class, "authorization.fxml");
         files.put(RegistrationController.class, "registration.fxml");
+        files.put(CreateController.class, "create.fxml");
+        files.put(GamesController.class, "games.fxml");
+        files.put(GuestRoomController.class, "guestroom.fxml");
+        files.put(MenuController.class, "menu.fxml");
     }
 
     public SceneService(Class<T> clas) throws IOException {
