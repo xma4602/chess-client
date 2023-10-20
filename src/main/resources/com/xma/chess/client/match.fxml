@@ -48,7 +48,7 @@
       </BorderPane>
    </left>
    <center>
-      <SubScene height="329.0" width="340.0" BorderPane.alignment="CENTER">
+      <SubScene fx:id="board" height="329.0" width="340.0" BorderPane.alignment="CENTER">
         <root>
           <Region />
         </root>
@@ -57,4 +57,7 @@
    <right>
       <Pane prefHeight="330.0" prefWidth="44.0" BorderPane.alignment="CENTER" />
    </right>
+   <bottom>
+      <Pane prefHeight="31.0" prefWidth="584.0" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>
