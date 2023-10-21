@@ -1,6 +1,6 @@
 package com.xma.chess.client.controllers;
 
-import com.xma.chess.client.IUserService;
+import com.xma.chess.client.net.IUserService;
 import com.xma.chess.client.SceneService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

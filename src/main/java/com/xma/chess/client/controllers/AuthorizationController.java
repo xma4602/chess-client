@@ -1,6 +1,6 @@
 package com.xma.chess.client.controllers;
 
-import com.xma.chess.client.IUserService;
+import com.xma.chess.client.net.IUserService;
 import com.xma.chess.client.SceneService;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -37,7 +37,7 @@ public class AuthorizationController implements Initializable {
     }
 
     @FXML
-    void signIn(ActionEvent event) {
+    void signIn(ActionEvent event) throws IOException {
         errors.setText("");
         if (verifyLogin(login.getText()) && verifyPassword(pass.getText())) {
             IUserService.AuthorizeResult result = userService.authorize(login.getText(), pass.getText());
@@ -46,7 +46,8 @@ public class AuthorizationController implements Initializable {
                 case INCORRECT -> errors.setText("Неверные логин и/или пароль");
                 case DISCONNECT -> errors.setText("Нет ответа сервера. Проверьте подключение в интернету");
                 case CORRECT -> {
-                    //переход в главное меню
+                    var service = new SceneService<>(MenuController.class);
+                    SceneService.switchScene(errors.getScene().getWindow(), service.getNewScene());
                 }
             }
         }
