@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="395.0" prefWidth="486.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.xma.chess.client.controllers.StatisticsController">
    <left>
       <Pane prefHeight="200.0" prefWidth="50.0" BorderPane.alignment="CENTER" />
    </left>
@@ -19,7 +19,7 @@
    <center>
       <VBox prefHeight="270.0" prefWidth="332.0" BorderPane.alignment="CENTER">
          <children>
-            <TableView prefHeight="158.0" prefWidth="386.0">
+            <TableView fx:id="table" prefHeight="158.0" prefWidth="386.0">
               <columns>
                 <TableColumn minWidth="100.0" prefWidth="-1.0" resizable="false" text="Время начала" />
                 <TableColumn minWidth="90.0" prefWidth="-1.0" text="Противник" />
@@ -27,24 +27,24 @@
                   <TableColumn minWidth="100.0" prefWidth="-1.0" text="Длительность" />
               </columns>
             </TableView>
-            <Label prefHeight="40.0" text="Процент побед/поражений/ничей:">
+            <Label fx:id="wins" prefHeight="40.0" text="Процент побед/поражений/ничей:">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font>
             </Label>
-            <Label prefHeight="40.0" text="Количество игр:">
+            <Label fx:id="gamesCount" prefHeight="40.0" text="Количество игр:">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font>
             </Label>
-            <Label prefHeight="40.0" text="Время в игре:">
+            <Label fx:id="totalTime" prefHeight="40.0" text="Время в игре:">
                <font>
                   <Font name="Calibri" size="20.0" />
                </font>
             </Label>
             <BorderPane>
                <center>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="Назад">
+                  <Button mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="100.0" text="Назад">
                      <font>
                         <Font name="Calibri" size="18.0" />
                      </font>
