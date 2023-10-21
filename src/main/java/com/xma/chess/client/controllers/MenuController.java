@@ -32,8 +32,9 @@ public class MenuController {
     }
 
     @FXML
-    void statistic(ActionEvent event) {
-
+    void statistic(ActionEvent event) throws IOException {
+        var service = new SceneService<>(StatisticsController.class);
+        SceneService.switchScene(label.getScene().getWindow(), service.getNewScene());
     }
 
     @FXML

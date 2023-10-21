@@ -26,6 +26,7 @@ public class SceneService<T>  {
         files.put(GuestRoomController.class, "guestroom.fxml");
         files.put(MenuController.class, "menu.fxml");
         files.put(MatchController.class, "match.fxml");
+        files.put(StatisticsController.class, "statistics.fxml");
     }
 
     public SceneService(Class<T> clas) throws IOException {
